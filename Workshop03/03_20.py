@@ -34,7 +34,7 @@ for i in range (7):
         d.update({letters[i][j]: letter_scores[i]})
 
 #Вводим слово
-word = list(input('Введите слово: '))
+word = str(input('Введите слово: '))
 score = 0
 
 #Считаем по словарю сумму баллов
