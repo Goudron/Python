@@ -12,23 +12,13 @@ A = []
 for i in range(N):
     A.append(int(input('Введите элемент массива: ')))
 X = int(input('Введите число для сравнения: '))
-nearest = 0
-
-#Поиск максимальной разницы между элементами,
-#чтобы использовать как исходно минимальную разницу
-delta = 0
-min = 0
-max = 0
-for i in range(N):
-    if A[i] < min:
-        min = A[i]
-    if A[i] > max:
-        max = A[i]
-delta = max - min
+nearest = A[0]
+delta = abs(A[0]-X)
 
 #Поиск ближайшего значения
-for i in range(N):
-    if abs(A[i]-nearest) < delta:
+for i in range(1, N):
+    if abs(A[i] - X) < delta:
         nearest = A[i]
+        delta = abs(A[i] - X)
 
 print(nearest)
