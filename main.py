@@ -1,5 +1,8 @@
-year = int(input('Введите год: '))
-if year%4 == 0 and year%100 != 0 or year%400 == 0:
-    print('YES')
-else:
-    print('NO')
+x = int(input())
+max = 0
+while x !=0:
+    x = int(input())
+    if x > max:
+        max = x
+
+print(max)
