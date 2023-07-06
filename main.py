@@ -1,19 +1,15 @@
-# Дан массив, состоящий из целых чисел.
-# Напишите программу, которая в данном массиве выведет количество элементов,
-# у которых два соседних и, при этом, оба соседних элемента меньше данного.
-# Сначала вводится число N — количество элементов в массиве  Далее записаны N чисел — элементы массива.
-# Массив состоит из целых чисел. 
-# Ввод: 			Ввод:
-# 5				5
-# 1 2 3 4 5			1 5 1 5 1
-# Вывод:			Вывод:
-# 0				2
+def characteristics(object):
+	return object % 2 == 0
 
-list = [int(input('x = ')) for i in range(int(input('n = ')))]
-counter = 0
+def same_by(characteristics, objects):
+	for i in range (len(objects)):
+		if characteristics == False:
+			return False
+	return True
 
-for i in range (1,len(list) - 1):
-    if list[i-1] < list[i] and list[i+1] < list[i]:
-        counter += 1
+values = [0, 2, 10, 6]
 
-print(counter)
+if same_by(lambda x: x % 2, values):
+	print('same')
+else:
+	print('different')
